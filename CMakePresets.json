@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "cmakeMinimumRequired": 
+    {
+        "major": 3,
+        "minor": 30,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "vcpkg",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE" : "Debug",
+                "CMAKE_CXX_STANDARD": "23",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "CMAKE_CXX_COMPILER" : "$env{CXX_COMPILER}",
+                "CMAKE_C_COMPILER" : "$env{C_COMPILER}",
+                "CMAKE_RC_COMPILER": "$env{RC_COMPILER}",
+                "CMAKE_LINKER" : "$env{LINKER}"
+            } 
+        }
+    ]
+}
